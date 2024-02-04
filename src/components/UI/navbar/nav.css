@@ -1,0 +1,110 @@
+nav {
+    position: fixed;
+    transform: translate(-50%, 0);
+    top: 0;
+    left: 50%;
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+    padding: 1rem;
+    box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
+    width: 80%;
+    z-index: 3;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    list-style: none;
+    display: block;
+    font-size: 100%;
+    font-weight: 600;
+    padding: 0.8rem 0;
+    color: #777;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+}
+
+nav ul li::after {
+    content: "";
+    background: #95b1cd;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    transition: top 0.5s, opacity 0.5s;
+}
+
+nav ul li:hover > a{
+    color: #ffffff;
+}
+
+nav ul li:hover::after {
+    top: 50%;
+    opacity: 1;
+}
+
+nav ul a {
+    padding: 0.8rem 2.5rem;
+    text-decoration: none;
+    color: #777;
+    transition: color 0.5s;
+}
+
+@media (max-width: 708px) {
+    nav {
+        position: initial;
+        transform: translate(0, 0);
+        background: #a7c7e7;
+        border-radius: 0 0 10px 10px;
+        padding: 1rem;
+        box-shadow: none;
+        width: 100%;
+        height: 100vh;
+        z-index: 3;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem 0 5rem 0;
+    }
+
+    nav ul li a {
+        position: relative;
+        color: #262626;
+    }
+
+    nav ul li a::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #777;
+        position: absolute;
+        top: 100%;
+    }
+
+    nav ul li::after {
+        display: none;
+    }
+
+    nav ul li:hover > a{
+        color: #626262;
+    }
+}

@@ -1,0 +1,129 @@
+.day h2, .sunrise, .sunset {
+    font-weight: 500;
+}
+
+.day {
+    margin-top: 2rem;
+    padding: 1.5rem 2.5rem;
+    background-color: rgba(255,255,255,0.25);
+    box-shadow: 0 8px 32px 0 rgba(89, 96, 190, 0.37);
+    backdrop-filter: blur( 6.5px );
+    -webkit-backdrop-filter: blur( 6.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.day:first-child {
+    margin-top: 7rem;
+}
+
+.day:last-child {
+    margin-bottom: 4rem;
+}
+
+.day__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.day__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.day__title img {
+    display: block;
+    margin-right: 2rem;
+}
+
+.astro div:first-child {
+    margin-bottom: 0.5rem;
+}
+
+.day__inner {
+    margin-top: 2rem;
+}
+
+.day__inner .main_w {
+    font-weight: 600;
+}
+
+.day__inner h3 {
+    font-weight: 500;   
+}
+
+.temperature {
+    margin-top: 1rem;
+}
+
+.rain_chance {
+    margin-top: 0.5rem;
+}
+
+.wind_speed {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 708px) {
+    .loaded_days {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .day {
+        width: 85%;
+    }
+
+    .day:first-child {
+        margin-top: 0rem;
+    }
+
+    .day__inner .main_w {
+        font-weight: 500;
+    }
+    
+    .day__inner h3 {
+        font-weight: 300;   
+    }
+
+    .astro span {
+        font-weight: 300;
+    }
+}
+
+@media (max-width: 615px) {
+    .day__header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .day {
+        width: 90%;
+    }
+
+    .day__title img {
+        display: block;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .day__title {
+        justify-content:left;
+    }
+
+    .day__title span {
+        padding-bottom: 2rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .day {
+        padding: 1.5rem 1.5rem;
+        font-size: 90%;
+    }
+}
